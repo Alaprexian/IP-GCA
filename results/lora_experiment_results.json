@@ -1,0 +1,32 @@
+{
+  "pre_adaptation": {
+    "mean_aop": 0.1842211482500107,
+    "std_aop": 0.058997092079692635,
+    "mean_ksr": 0.2910274863516038,
+    "std_ksr": 0.04760813256097458,
+    "dar": 0.0,
+    "mean_edit_distance": 90.625
+  },
+  "in_context_kpref": {
+    "mean_aop": 0.6038881732963162,
+    "std_aop": 0.03108075294036005,
+    "mean_ksr": 0.5532323480568144,
+    "std_ksr": 0.022143178545230215,
+    "dar": 0.0,
+    "mean_edit_distance": 103.1875
+  },
+  "post_lora_adaptation": {
+    "mean_aop": 0.8008414432834734,
+    "std_aop": 0.32677223358523066,
+    "mean_ksr": 0.8271535602547193,
+    "std_ksr": 0.28655733802779404,
+    "dar": 0.6875,
+    "mean_edit_distance": 23.25
+  },
+  "relative_gains": {
+    "delta_aop": 0.6166202950334627,
+    "delta_ksr": 0.5361260739031155,
+    "delta_dar": 0.6875,
+    "edit_distance_reduction_percent": 74.34482758620689
+  }
+}

@@ -1,0 +1,33 @@
+# Entornos virtuales
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Modelos pesados descargados (GBs)
+models/
+weights/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.gguf
+*.onnx
+
+# Logs
+logs/
+results/logs/
+*.log
+
+# Entornos y temporales
+.idea/
+.vscode/
+*.swp
+.DS_Store

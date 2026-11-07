@@ -1,0 +1,262 @@
+{
+  "batch_id": "lora_batch_0001",
+  "total_samples": 32,
+  "samples": [
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Cuánto tiempo tengo para devolver unos auriculares inalámbricos?",
+      "output": "El plazo estándar es de 30 días, pero para auriculares y productos de audio es de 15 días presentando el empaque original sellado.",
+      "rejected": "El plazo de devolución estándar es de 30 días con recibo original.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'días, pero para auriculares y productos de audio es de 15, presentando'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Qué cubre la garantía de mi laptop si se derramó agua sobre el teclado?",
+      "output": "La garantía estándar de 12 meses cubre únicamente defectos de fabricación de hardware y excluye expresamente daños por líquidos o caídas accidentales.",
+      "rejected": "La garantía del fabricante cubre 12 meses para cualquier falla de funcionamiento.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'estándar, de'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: Quiero cancelar mi suscripción mensual a mitad del mes, ¿me reembolsan los días que no usé?",
+      "output": "Puedes cancelar tu suscripción mensual en cualquier momento sin penalización, pero el servicio se mantendrá activo hasta fin de ciclo sin reembolsos proporcionales.",
+      "rejected": "Puedes cancelar tu suscripción en cualquier momento y recibirás un reembolso prorrateado.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'mensual, sin'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Cuánto tiempo dura la garantía de un teléfono reacondicionado Grado B?",
+      "output": "Los productos reacondicionados Grado B cuentan con 6 meses de garantía directa de tienda y 15 días para devolución.",
+      "rejected": "Todos los productos tienen 12 meses de garantía oficial.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Los, reacondicionados'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: Olvidé mi contraseña y no tengo acceso a mi app de autenticación 2FA, ¿me la pueden desactivar?",
+      "output": "Por seguridad, el soporte de primer nivel no puede desactivar el 2FA directamente; debes enviar documento de identidad oficial para validación de seguridad.",
+      "rejected": "Sí, indícanos tu correo electrónico y desactivaremos el 2FA de tu cuenta de inmediato.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Por, seguridad,'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: El paquete llegó golpeado y con la caja rota, ¿cuánto tiempo tengo para avisar?",
+      "output": "Los daños visibles por transporte deben notificarse dentro de las 48 horas posteriores a la recepción adjuntando fotos del empaque y guía.",
+      "rejected": "Tienes hasta 30 días para reportar cualquier inconveniente con tu compra.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Los, daños'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Tengo que pagar impuestos de aduana para un envío internacional?",
+      "output": "Los aranceles aduaneros e impuestos de importación en envíos internacionales son responsabilidad exclusiva del cliente al arribar al país de destino.",
+      "rejected": "Nuestros precios incluyen todos los impuestos y gastos de entrega.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Los, aranceles'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: Quiero cancelar mi pedido que ya figura como Despachado en camino",
+      "output": "Los pedidos despachados en ruta con la paquetería no pueden cancelarse en tránsito; deberás recibirlo y tramitar la devolución regular.",
+      "rejected": "Cancelaremos tu pedido de inmediato y devolveremos el importe a tu tarjeta.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Los, pedidos'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Cuánto tiempo es válida la cotización de retoma de mi celular usado en Trade-In?",
+      "output": "La cotización preliminar de Trade-In tiene una vigencia de 14 días para enviar el equipo mediante guía prepagada a inspección técnica.",
+      "rejected": "La cotización en línea se mantiene vigente de forma indefinida.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'preliminar, Trade-In'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Cuándo caducan los puntos de fidelidad de mi membresía VIP?",
+      "output": "Los puntos de fidelidad VIP tienen una vigencia de 12 meses calendario desde su acreditación y acumulan 5 puntos por dólar.",
+      "rejected": "Los puntos no tienen fecha de caducidad.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'de fidelidad VIP, una vigencia'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Cuántos días tengo para recoger mi paquete en casillero inteligente Click & Collect?",
+      "output": "Dispones de un plazo máximo de 7 días naturales con tu código QR antes de que el pedido sea devuelto automáticamente a almacén central.",
+      "rejected": "Puedes retirarlo cuando gustes durante el horario comercial.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Dispones, de'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Qué cubre el plan de protección Care Plus contra accidentes?",
+      "output": "Care Plus cubre hasta 2 incidentes anuales por daño accidental o derrame con deducible del 10% del valor del equipo.",
+      "rejected": "El plan Care Plus repara cualquier rotura de manera gratuita e ilimitada.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'cubre, hasta'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: Veo un cargo duplicado en mi estado de cuenta de banco, ¿cómo lo resuelven?",
+      "output": "Reporta el folio de autorización a nuestro equipo; investigaremos y resolveremos la reversión en 72 horas hábiles sin necesidad de contracargo.",
+      "rejected": "Debes llamar a tu banco para desconocer la compra.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Reporta, el folio de autorización'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: Queremos comprar 25 computadoras para nuestra oficina, ¿hay descuento corporativo?",
+      "output": "Compras mayores a 10 unidades califican para condiciones B2B con descuentos escalonados del 5% al 20% y crédito comercial a 30 días.",
+      "rejected": "Los precios publicados en la web son los mismos para cualquier cantidad.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Compras, mayores'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: Compré una clave de software digital pero ya no la necesito, ¿me la pueden reembolsar?",
+      "output": "Las licencias y claves digitales no son reembolsables una vez revelado el código en el portal por políticas de protección de derechos de autor.",
+      "rejected": "Sí, tramita la devolución dentro de los 30 días posteriores.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Las, licencias'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Puedo cambiar la dirección de entrega de mi pedido a otra ciudad tras haber pagado?",
+      "output": "Por prevención de fraude no se permiten cambios hacia ciudades o países distintos una vez procesado el pago de la orden.",
+      "rejected": "Puedes modificar la dirección de entrega en cualquier momento desde tu cuenta.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Por, prevención de fraude no se permiten cambios hacia ciudades o países distintos una vez procesado el pago de'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Aceptan tarjetas de débito extranjeras en la tienda en línea?",
+      "output": "Aceptamos tarjetas de débito y crédito internacionales Visa y Mastercard procesadas bajo estándares seguros PCI-DSS y pasarelas verificadas.",
+      "rejected": "Solo aceptamos tarjetas de crédito emitidas en territorio nacional.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Aceptamos, débito y'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Cómo funciona la entrega exprés garantizada en 24 horas?",
+      "output": "El envío exprés garantiza entrega en 1 a 2 días hábiles únicamente para pedidos realizados y confirmados antes de las 2:00 PM hora local.",
+      "rejected": "Todos los pedidos llegan en 24 horas a cualquier parte del país.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'El, envío exprés garantiza entrega en 1 a 2 días hábiles únicamente para'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Puedo traspasar mi contrato corporativo a otra razón social tras una fusión?",
+      "output": "La cesión de titularidad es factible presentando poder notarial y cédula fiscal de ambas partes en un plazo de trámite de 3 a 5 días hábiles.",
+      "rejected": "No es posible cambiar el titular de un contrato vigente.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'La cesión de titularidad, factible'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Dónde puedo reciclar la batería dañada de mi equipo antiguo?",
+      "output": "Puedes entregarla en los contenedores RAEE de nuestras sucursales y recibirás un cupón de agradecimiento con 5% de descuento ecológico.",
+      "rejected": "Debes desecharla en la basura municipal correspondiente.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Puedes, entregarla'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿El plan anual de suscripción permite reembolso si cancelo a los pocos días?",
+      "output": "Los planes anuales disponen de un período de gracia de 14 días desde el inicio o renovación para solicitar reembolso total si no estás satisfecho.",
+      "rejected": "Ningún plan tiene derecho a devolución de dinero tras pagar.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Los, planes'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: Mi producto llegó con una pieza faltante, ¿debo devolver todo el producto?",
+      "output": "Notifícanos dentro de las 48 horas con el número de serie para gestionar el envío prioritario de la pieza faltante sin devolver la unidad completa.",
+      "rejected": "Sí, devuelve la caja completa para poder atenderte.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Notifícanos, dentro de las 48 horas con el número de serie para gestionar el envío prioritario de'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Puedo usar dos cupones de descuento simultáneamente en una sola compra?",
+      "output": "Los cupones de descuento no son acumulables entre sí ni combinables con promociones de meses sin intereses salvo especificación expresa de campaña.",
+      "rejected": "Puedes ingresar todos los códigos promocionales que tengas en el carrito.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Los, cupones'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Cuánto tarda la reparación de un equipo en taller técnico autorizado?",
+      "output": "El tiempo estándar de servicio técnico en laboratorio central oscila entre 5 y 10 días hábiles tras recibir el equipo con orden RMA.",
+      "rejected": "Las reparaciones se completan en 24 horas.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'El, tiempo'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: El transportista fue a mi casa y no me encontró, ¿cuántos intentos más hará?",
+      "output": "La transportista realiza hasta 3 intentos de entrega en días hábiles consecutivos antes de dejar el paquete 5 días en sucursal para retiro personal.",
+      "rejected": "El paquete se regresa inmediatamente al almacén si nadie atiende.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'La transportista realiza hasta 3 intentos de entrega en días hábiles consecutivos antes de dejar el, 5'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Puedo solicitar factura fiscal con NIT/RFC de una compra realizada el mes pasado?",
+      "output": "La facturación electrónica debe solicitarse dentro del mismo mes calendario de la compra a través del portal de autofacturación.",
+      "rejected": "Las facturas pueden emitirse en cualquier momento del año fiscal.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'La, facturación'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: Si compro un artículo marcado como Venta Final, ¿tiene derecho a reembolso?",
+      "output": "Los artículos en liquidación o etiquetados como Venta Final no son elegibles para devolución salvo fallas cubiertas por la garantía de fábrica.",
+      "rejected": "Todos los artículos comprados tienen garantía de satisfacción y devolución de 30 días.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Los, en'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Qué sucede si no recojo mi pedido en la tienda después de 10 días?",
+      "output": "El plazo máximo de retiro en tienda es de 7 días naturales; vencido el plazo, el producto regresa a stock y se procesa el reembolso.",
+      "rejected": "El paquete te esperará en la sucursal de manera indefinida.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'plazo, máximo'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Cómo puedo escalar mi caso si no estoy conforme con la solución de soporte?",
+      "output": "Si una inconformidad no se resuelve tras dos contactos, puedes solicitar formalmente la intervención de la Oficina del Defensor del Cliente.",
+      "rejected": "La respuesta brindada por el agente telefónico es definitiva e inapelable.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Si, una'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Por qué me cobran cargo de envío si mi compra fue de $20 dólares siendo VIP?",
+      "output": "El beneficio de envío exprés gratuito para miembros VIP aplica para compras superiores a $25.00 USD en productos participantes.",
+      "rejected": "Los envíos VIP siempre son completamente gratuitos sin importar el monto.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'El, beneficio de envío exprés gratuito para miembros'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Puedo solicitar el reembolso en efectivo si pagué originalmente con tarjeta de débito?",
+      "output": "Por regulaciones fiscales y antifraude, los reembolsos se acreditan estrictamente al mismo método de pago utilizado en la transacción original.",
+      "rejected": "Sí, acércate a cualquier caja física para recibir efectivo al instante.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Por, regulaciones'."
+    },
+    {
+      "instruction": "Responde a la siguiente consulta del cliente aplicando las directivas corporativas oficiales.",
+      "input": "Consulta: ¿Cómo demuestro la compra si perdí el comprobante impreso de mi equipo?",
+      "output": "Si extraviaste el recibo físico, puedes descargar el comprobante digital desde tu historial de pedidos en el portal oficial con tu correo registrado.",
+      "rejected": "Sin el recibo en papel original no podemos atender ninguna solicitud.",
+      "edit_type": "EXPANSION_DETAIL",
+      "diff_summary": "Ampliación de detalles: El operador añadió especificaciones: 'Si extraviaste, físico, puedes descargar el comprobante digital desde tu historial de pedidos'."
+    }
+  ]
+}

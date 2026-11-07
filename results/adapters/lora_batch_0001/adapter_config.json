@@ -1,0 +1,22 @@
+{
+  "batch_id": "lora_batch_0001",
+  "sample_count": 32,
+  "base_model": "models/Qwen2.5-1.5B-Instruct",
+  "lora_config": {
+    "r": 8,
+    "lora_alpha": 16,
+    "target_modules": [
+      "q_proj",
+      "v_proj",
+      "k_proj",
+      "o_proj"
+    ],
+    "lora_dropout": 0.05,
+    "bias": "none",
+    "task_type": "CAUSAL_LM"
+  },
+  "epochs": 3,
+  "learning_rate": 0.0002,
+  "status": "DRY_RUN_COMPLETED",
+  "note": "Adapter configuration and dataset verified. Local weights not found or dry_run=True; skipped heavy weight gradient updates."
+}

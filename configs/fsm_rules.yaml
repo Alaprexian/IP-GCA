@@ -1,0 +1,79 @@
+fsm_definition:
+  name: "CustomerSupportTransactionalFSM"
+  initial_state: "IDLE"
+  error_state: "ERROR_STATE"
+  final_states: ["TICKET_CLOSED", "ESCALATED_TO_HUMAN"]
+
+states:
+  - name: "IDLE"
+    description: "Estado inicial del turno de soporte"
+  - name: "AUTHENTICATED"
+    description: "Cliente o identificador de sesión validado"
+  - name: "TICKET_LOADED"
+    description: "Historial de ticket o pedido cargado en contexto"
+  - name: "POLICY_EVALUATED"
+    description: "Políticas corporativas o términos de garantía consultados"
+  - name: "ACTION_PREPARED"
+    description: "Propuesta de acción estructurada con argumentos validados"
+  - name: "OPERATOR_APPROVED"
+    description: "Confirmación explícita del operador humano en la interfaz"
+  - name: "MUTATION_EXECUTED"
+    description: "Llamada a herramienta MCP transaccional ejecutada con éxito"
+  - name: "TICKET_CLOSED"
+    description: "Sesión resuelta y cerrada"
+
+transitions:
+  - trigger: "authenticate_customer"
+    source: "IDLE"
+    destination: "AUTHENTICATED"
+    mcp_tool: "mcp://crm/authenticate"
+    required_params: ["customer_id"]
+
+  - trigger: "fetch_ticket"
+    source: "AUTHENTICATED"
+    destination: "TICKET_LOADED"
+    mcp_tool: "mcp://crm/get_ticket_details"
+    required_params: ["ticket_id"]
+
+  - trigger: "evaluate_policy"
+    source: "TICKET_LOADED"
+    destination: "POLICY_EVALUATED"
+    mcp_tool: "mcp://rag/verify_policy"
+    required_params: ["policy_category"]
+
+  - trigger: "prepare_action"
+    source: "POLICY_EVALUATED"
+    destination: "ACTION_PREPARED"
+    mcp_tool: "mcp://crm/draft_action"
+    required_params: ["action_type", "amount"]
+    guards:
+      - condition: "amount <= 500" # Regla de negocio de ejemplo
+        error_message: "Monto excede el límite permitido para reembolso directo sin supervisor"
+
+  - trigger: "human_operator_approve"
+    source: "ACTION_PREPARED"
+    destination: "OPERATOR_APPROVED"
+    is_human_gate: true
+
+  - trigger: "execute_action"
+    source: "OPERATOR_APPROVED"
+    destination: "MUTATION_EXECUTED"
+    mcp_tool: "mcp://crm/execute_refund"
+    required_params: ["ticket_id", "approval_token"]
+
+  # Alias explícito para herramienta de reembolso — debe pasar por OPERATOR_APPROVED
+  # Guard: bloquea tokens no verificados (e.g. UNVERIFIED_TOKEN del SAMPLE_06)
+  - trigger: "execute_refund"
+    source: "OPERATOR_APPROVED"
+    destination: "MUTATION_EXECUTED"
+    mcp_tool: "mcp://crm/execute_refund"
+    required_params: ["ticket_id", "approval_token"]
+    guards:
+      - condition: "approval_token != 'UNVERIFIED_TOKEN'"
+        error_message: "Token de aprobación no verificado. Transferencia bloqueada por guardrail de seguridad."
+
+  - trigger: "close_ticket"
+    source: ["MUTATION_EXECUTED", "POLICY_EVALUATED"]
+    destination: "TICKET_CLOSED"
+    mcp_tool: "mcp://crm/close_ticket"
+    required_params: ["ticket_id", "resolution_summary"]

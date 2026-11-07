@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP-GCA Copilot — Sistema de Decisión Asistido por IA</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Top Header
+       ========================================================================= -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="brand-icon">⚡</div>
+      <div>
+        <div class="brand-title">
+          IP-GCA Copilot
+          <span class="brand-badge">Orquestador v2.0</span>
+        </div>
+        <div style="font-size: 10px; color: var(--text-muted);">
+          Gated Parametric Routing • Temporal Preferences • FSM Guardrails
+        </div>
+      </div>
+    </div>
+
+    <!-- Live System Telemetry -->
+    <div class="header-stats">
+      <div class="stat-pill">
+        <span class="status-dot pulse"></span>
+        <span>FSM:</span>
+        <strong id="header-fsm-state">IDLE</strong>
+      </div>
+      <div class="stat-pill">
+        <span>Embedder:</span>
+        <strong id="stat-dense-model">all-MiniLM-L6-v2</strong>
+      </div>
+      <div class="stat-pill">
+        <span>Decay:</span>
+        <strong id="stat-decay">γ = 0.95</strong>
+      </div>
+      <div class="stat-pill">
+        <span>Memoria (k_pref):</span>
+        <strong id="stat-kpref-count">0</strong>
+      </div>
+    </div>
+
+    <!-- Quick Global Actions -->
+    <div class="header-actions">
+      <button id="btn-lora-sync" class="btn btn-secondary btn-sm" onclick="triggerLoraSync()" title="Consolida deltas de preferencia acumulados en adaptadores LoRA">
+        Sincronizar LoRA
+      </button>
+      <button id="btn-reset-fsm" class="btn btn-secondary btn-sm" onclick="resetFSM()" title="Reinicia la máquina de estados FSM al estado IDLE inicial">
+        Reset FSM
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       Main Workspace: 3 Columns
+       ========================================================================= -->
+  <main class="app-container">
+
+    <!-- =======================================================================
+         COLUMN 1: Customer Context & Input Console
+         ======================================================================= -->
+    <section class="column" aria-label="Customer & Input Console">
+
+      <!-- Preset Selector & Customer Metadata Card -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Casos de Prueba Estandarizados</span>
+          <span class="brand-badge">Benchmark</span>
+        </div>
+        <select id="preset-select" class="preset-selector" onchange="onPresetSelected()">
+          <option value="">Cargando casos...</option>
+        </select>
+        <div id="preset-hint" style="display:none; font-size: 11px; color: var(--accent-cyan); background: rgba(6,182,212,0.08); padding: 6px 8px; border-radius: 4px; margin-bottom: 10px; border-left: 2px solid var(--accent-cyan);"></div>
+
+        <div class="customer-meta">
+          <div class="meta-box">
+            <span>Cliente ID</span>
+            <strong id="customer-id">CUST_001</strong>
+          </div>
+          <div class="meta-box">
+            <span>Categoría / Nivel</span>
+            <strong id="customer-tier">Empresarial Platinum</strong>
+          </div>
+          <div class="meta-box">
+            <span>SLA Objetivo</span>
+            <strong id="customer-sla">&lt; 150 ms</strong>
+          </div>
+          <div class="meta-box">
+            <span>Canal</span>
+            <strong id="customer-channel">Escritorio HITL</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Query Input Card -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Consulta del Operador / Cliente</span>
+        </div>
+        <div class="query-input-box">
+          <textarea id="query-input" class="textarea-query" placeholder="Escribe aquí la consulta del cliente o selecciona un caso estandarizado arriba..." rows="4"></textarea>
+          <button id="btn-send-turn" class="btn btn-primary" onclick="submitTurn()">
+            ⚡ Enviar al Copilot
+          </button>
+        </div>
+      </div>
+
+      <!-- Interaction History Stream Card -->
+      <div class="card" style="flex-grow: 1;">
+        <div class="card-header">
+          <span class="card-title">Flujo de Interacción</span>
+        </div>
+        <div id="chat-stream" class="chat-stream">
+          <div class="chat-bubble assistant">
+            Bienvenido al entorno de evaluación <strong>IP-GCA Copilot</strong>. Selecciona un caso estandarizado o formula una consulta para inspeccionar el enrutamiento GPL, la incertidumbre contextual y las salvaguardas FSM.
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =======================================================================
+         COLUMN 2: GPL Controller, Suggestion & HITL Studio
+         ======================================================================= -->
+    <section class="column" aria-label="GPL Controller & HITL Studio">
+
+      <!-- GPL Router Status Card -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Enrutador Predictivo GPL (Gated Parametric)</span>
+          <span id="route-badge" class="route-badge FAST_PARAMETRIC">LISTO</span>
+        </div>
+
+        <div class="gpl-banner">
+          <div>
+            <span style="font-size: 10px; color: var(--text-muted); display:block; text-transform:uppercase;">Incertidumbre (u_ctx)</span>
+            <strong id="u-score-val" style="font-family: var(--font-mono); font-size: 18px; color: var(--accent-cyan);">0.000</strong>
+          </div>
+          <div class="uncertainty-gauge">
+            <span style="font-size: 10px; color: var(--text-muted);">Umbrales: &lt;0.35 Param | &lt;0.70 RAG | &gt;0.70 Agentic</span>
+            <div class="gauge-bar-bg">
+              <div id="gauge-fill" class="gauge-bar-fill" style="width: 15%;"></div>
+            </div>
+          </div>
+          <div class="latency-metric">
+            <span id="latency-val">0.0 ms</span>
+            <span>Latencia E2E</span>
+          </div>
+        </div>
+
+        <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.4; background: rgba(0,0,0,0.2); padding: 8px 10px; border-radius: var(--radius-sm);">
+          <strong>Racional del Enrutamiento:</strong>
+          <span id="routing-rationale" style="color: #CBD5E1;">A la espera de la primera consulta...</span>
+        </div>
+      </div>
+
+      <!-- Copilot Suggestion Card -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Sugerencia del Modelo Asistivo (S_gen)</span>
+          <span class="brand-badge" style="background: rgba(139,92,246,0.15); color: var(--accent-violet); border-color: rgba(139,92,246,0.3);">Copilot Output</span>
+        </div>
+        <div id="ai-suggestion-text" class="suggestion-box">
+          <em>La sugerencia generada por el orquestador IP-GCA aparecerá aquí tras enviar el turno...</em>
+        </div>
+
+        <!-- Evidencia Contextual RAG / Preferencias -->
+        <details style="margin-top: 4px; font-size: 11px; cursor: pointer;">
+          <summary style="color: var(--accent-cyan); font-weight: 600; outline: none; margin-bottom: 6px;">
+            Ver Pasajes Recuperados y Preferencias Aplicadas
+          </summary>
+          <div style="margin-top: 6px;">
+            <div style="font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">Pasajes de Base de Conocimiento:</div>
+            <div id="passages-container" style="max-height: 110px; overflow-y: auto;">
+              <span style="color: var(--text-muted);">Sin pasajes activos.</span>
+            </div>
+            <div style="font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-top: 8px; margin-bottom: 4px;">Preferencias Dinámicas Activas (k_pref):</div>
+            <div id="applied-prefs-container">
+              <span style="color: var(--text-muted);">Sin precedentes aplicados.</span>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- HITL Operator Studio Card -->
+      <div class="card" style="flex-grow: 1;">
+        <div class="hitl-studio">
+          <div class="hitl-title">
+            <span>Estudio de Edición del Operador (S_human)</span>
+            <span class="brand-badge" style="background: rgba(245,158,11,0.15); color: var(--accent-amber); border-color: rgba(245,158,11,0.3);">HITL Feed</span>
+          </div>
+
+          <textarea id="human-editor" class="textarea-human" oninput="updateLiveDiff()" placeholder="Modifica aquí el texto propuesto por la IA para corregirlo o adaptarlo al estilo de la organización..."></textarea>
+
+          <!-- Live Diff View -->
+          <div>
+            <span style="font-size: 10px; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 4px;">Diff en Vivo (Inserciones vs Supresiones):</span>
+            <div id="diff-output" class="diff-container">
+              <span style="color: var(--text-muted);">Sin cambios detectados.</span>
+            </div>
+          </div>
+
+          <!-- HITL Metrics Bar -->
+          <div class="hitl-metrics-bar">
+            <div class="hitl-metric-item">
+              <span>Keystroke Ratio (KSR)</span>
+              <strong id="hitl-ksr">1.000</strong>
+            </div>
+            <div class="hitl-metric-item">
+              <span>Aceptación Op (A_op)</span>
+              <strong id="hitl-aop">1.000</strong>
+            </div>
+            <div class="hitl-metric-item">
+              <span>Categoría Delta</span>
+              <strong id="hitl-cat" style="color: var(--accent-cyan); font-size: 11px;">IDENTICAL</strong>
+            </div>
+            <div class="hitl-metric-item">
+              <span>Aceptación Directa (DAR)</span>
+              <strong id="hitl-dar">100%</strong>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div style="display: flex; gap: 10px; margin-top: 4px;">
+            <button id="btn-approve-direct" class="btn btn-success" style="flex: 1;" onclick="approveDirectly()">
+              ✓ Aprobar Directo (DAR=1)
+            </button>
+            <button id="btn-save-hitl" class="btn btn-primary" style="flex: 1;" onclick="saveFeedback(false)">
+              Guardar Corrección (k_pref)
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =======================================================================
+         COLUMN 3: Guardrail FSM & Preference Memory
+         ======================================================================= -->
+    <section class="column" aria-label="Guardrail FSM & Preferences">
+
+      <!-- FSM Machine Visualizer Card -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Guardrail FSM Determinista</span>
+          <span class="brand-badge" style="background: rgba(16,185,129,0.15); color: var(--accent-emerald); border-color: rgba(16,185,129,0.3);">Seguridad Estricta</span>
+        </div>
+
+        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">
+          Garantiza aislamiento formal de mutaciones críticas (pago, cancelaciones, reembolsos).
+        </div>
+
+        <!-- Node List -->
+        <div id="fsm-node-list" class="fsm-node-list">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Guardrail Alert Shield -->
+        <div id="guardrail-alert" class="guardrail-alert" style="margin-top: 10px;">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Safety Simulation Tool Buttons -->
+        <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 6px;">
+          <button class="btn btn-danger btn-sm" onclick="testIllegalRefund()" title="Simula ataque de inyección o tool call no autorizado desde estado IDLE (SAMPLE_06)">
+            Probar Reembolso Ilegal (SAMPLE_06)
+          </button>
+        </div>
+      </div>
+
+      <!-- Preference Memory Table Card -->
+      <div class="card" style="flex-grow: 1;">
+        <div class="card-header">
+          <span class="card-title">Memoria de Preferencias (k_pref)</span>
+          <span class="brand-badge">Decaimiento γ=0.95</span>
+        </div>
+
+        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">
+          Deltas de operadores amortizados y sincronizados hacia LoRA:
+        </div>
+
+        <div style="overflow-y: auto; max-height: 280px;">
+          <table class="pref-table">
+            <thead>
+              <tr>
+                <th>Clave</th>
+                <th>Resumen Delta</th>
+                <th>Peso</th>
+                <th>LoRA</th>
+              </tr>
+            </thead>
+            <tbody id="pref-tbody">
+              <tr>
+                <td colspan="4" style="color:var(--text-muted); text-align:center;">No hay deltas registrados en la sesión.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Notification Toast -->
+  <div id="toast" style="display:none; position: fixed; bottom: 20px; right: 20px; background: #06B6D4; color: #070B14; padding: 10px 18px; border-radius: 8px; font-size: 12px; font-weight: 700; box-shadow: 0 4px 18px rgba(6,182,212,0.5); z-index: 1000;"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

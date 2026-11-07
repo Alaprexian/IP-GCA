@@ -1,0 +1,6 @@
+[
+  {"customer_id": "CUST_001", "name": "Ana García",  "email": "ana.garcia@email.com", "tier": "premium", "status": "active", "open_tickets": ["TCK_0042"]},
+  {"customer_id": "CUST_002", "name": "Luis Pérez",  "email": "luis.perez@email.com", "tier": "standard", "status": "active", "open_tickets": []},
+  {"customer_id": "CUST_003", "name": "María López", "email": "maria.lopez@email.com", "tier": "standard", "status": "suspended", "open_tickets": ["TCK_0099", "TCK_0103"]},
+  {"customer_id": "CUST_004", "name": "Carlos Torres","email": "carlos.torres@email.com","tier": "enterprise","status": "active", "open_tickets": []}
+]

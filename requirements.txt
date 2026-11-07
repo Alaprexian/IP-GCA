@@ -1,0 +1,41 @@
+# Core PyTorch con CUDA 12.4 (versión estable 2.5.1 probada en Windows)
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.5.1+cu124
+torchvision==0.20.1+cu124
+torchaudio==2.5.1+cu124
+
+# LLMs y Transformers
+transformers>=4.45.0
+accelerate>=0.34.0
+peft>=0.13.0
+bitsandbytes>=0.43.0
+sentencepiece
+protobuf
+
+# Recuperación y Embeddings
+sentence-transformers>=3.1.0
+rank-bm25>=0.2.2
+
+# Protocolo MCP y Redes
+mcp>=1.0.0
+pydantic>=2.8.0
+fastapi>=0.112.0
+uvicorn>=0.30.0
+httpx>=0.27.0
+
+# Métricas y Evaluación
+ragas>=0.1.15
+evaluate>=0.4.2
+Levenshtein>=0.25.0
+scikit-learn>=1.5.0
+scipy
+numpy
+
+# Utilidades
+pyyaml
+rich
+tqdm
+pytest
+matplotlib>=3.8.0
+pywebview>=6.0.0
+

@@ -1,0 +1,5 @@
+[
+  {"ticket_id": "TCK_0042", "customer_id": "CUST_001", "subject": "Solicitud de reembolso por producto defectuoso", "category": "refund", "status": "open", "amount_requested": 89.99, "created_at": "2026-10-01"},
+  {"ticket_id": "TCK_0099", "customer_id": "CUST_003", "subject": "No recibí mi pedido - código de seguimiento inválido", "category": "shipping", "status": "open", "amount_requested": 0, "created_at": "2026-09-28"},
+  {"ticket_id": "TCK_0103", "customer_id": "CUST_003", "subject": "Cancelar suscripción anual", "category": "subscription", "status": "open", "amount_requested": 0, "created_at": "2026-09-30"}
+]

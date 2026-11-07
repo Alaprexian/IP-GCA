@@ -1,0 +1,17 @@
+% Tabla generada automáticamente para la Tesis IP-GCA
+\begin{table}[h]
+\centering
+\caption{Impacto cuantitativo del micro-ajuste LoRA sobre el conjunto de prueba independiente ($N=16$).}
+\label{tab:lora_adaptation_impact}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Condición Experimental} & $\mathbf{A_{op}}$ & \textbf{KSR} & \textbf{DAR (\%)} & \textbf{Dist. Edición (caracteres)} \\
+\midrule
+Pre-Adaptación (Modelo Base) & 0.184 $\pm$ 0.059 & 0.291 $\pm$ 0.048 & 0.0\% & 90.6 \\
+In-Context Conditioning ($k_{pref}$) & 0.604 $\pm$ 0.031 & 0.553 $\pm$ 0.022 & 0.0\% & 103.2 \\
+\textbf{Post-Adaptación LoRA (Propuesto)} & \textbf{0.801 $\pm$ 0.327} & \textbf{0.827 $\pm$ 0.287} & \textbf{68.8\%} & \textbf{23.2} \\
+\midrule
+\textbf{Ganancia Neta ($\Delta$)} & \textbf{+0.617} & \textbf{+0.536} & \textbf{+68.8\%} & \textbf{-74.3\%} \\
+\bottomrule
+\end{tabular}
+\end{table}

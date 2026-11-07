@@ -1,0 +1,152 @@
+[
+  {
+    "doc_id": "pol_devoluciones_v3",
+    "title": "Política de Devoluciones y Reembolsos",
+    "metadata": {"category": "refund", "version": "3.0", "effective_date": "2026-01-01"},
+    "text": "Los clientes pueden solicitar un reembolso completo dentro de los primeros 30 días naturales posteriores a la fecha de compra, siempre que presenten el recibo o comprobante original. El artículo debe estar en condición original, sin signos de uso, con todas sus etiquetas y empaques originales intactos. Las solicitudes de devolución pueden realizarse de manera presencial en cualquier tienda, o a través del portal web ingresando el código de pedido. El plazo de procesamiento es de 5 a 7 días hábiles una vez recibido el artículo en nuestros almacenes. En caso de artículos defectuosos o con daños atribuibles al fabricante, el plazo de devolución se extiende a 60 días desde la fecha de entrega. Los reembolsos se acreditarán al método de pago original. Si el pago fue realizado en efectivo, el reembolso se emitirá como crédito en tienda. Los artículos en liquidación o marcados como 'Venta Final' no son elegibles para devolución, a excepción de los casos cubiertos por la garantía del fabricante."
+  },
+  {
+    "doc_id": "pol_garantia_electronicos",
+    "title": "Garantía de Dispositivos Electrónicos",
+    "metadata": {"category": "warranty", "department": "technical_support"},
+    "text": "Todos los dispositivos electrónicos vendidos en nuestra plataforma cuentan con una garantía limitada del fabricante por un período de 12 meses contra defectos de fábrica a partir de la fecha de entrega documentada. Para activar la garantía, el cliente debe registrar el producto en el portal de garantías dentro de los primeros 30 días tras la compra. La garantía cubre fallas eléctricas y mecánicas bajo condiciones de uso normal. Quedan excluidos de la cobertura los daños causados por líquidos, golpes, modificaciones no autorizadas, uso inapropiado o deterioro natural por el paso del tiempo. Para gestionar un reclamo de garantía, el cliente debe contactar a nuestro equipo de soporte técnico e indicar el número de modelo, número de serie y descripción detallada de la falla. El tiempo de respuesta para diagnóstico es de 3 días hábiles. En caso de que el artículo sea irreparable, se ofrecerá una unidad de reemplazo del mismo modelo o superior. Las reparaciones en garantía no tienen costo para el cliente, incluyendo el envío de ida y vuelta."
+  },
+  {
+    "doc_id": "pol_suscripciones_digitales",
+    "title": "Gestión de Suscripciones y Planes Recurrentes",
+    "metadata": {"category": "subscription", "department": "billing"},
+    "text": "Los planes de suscripción mensual, trimestral y anual pueden cancelarse en cualquier momento desde el panel de administración de cuenta del cliente, sin cargos por cancelación anticipada. Al cancelar, el acceso a los servicios continuará activo hasta el último día del ciclo de facturación ya pagado. No se realizan reembolsos proporcionales por los días no utilizados del período vigente, excepto en los planes anuales cancelados dentro de los primeros 14 días de haber iniciado el nuevo período. Para solicitar una excepción o una pausa temporal en la suscripción por razones médicas o económicas documentadas, el cliente debe contactar al equipo de soporte adjuntando la documentación correspondiente. Las cuentas con saldos pendientes no podrán ser canceladas hasta que el saldo sea regularizado. Los cambios de plan (upgrade o downgrade) son efectivos inmediatamente en el caso de upgrade, y al inicio del siguiente ciclo de facturación en el caso de downgrade."
+  },
+  {
+    "doc_id": "pol_envios_y_entregas",
+    "title": "Política de Envíos y Tiempos de Entrega",
+    "metadata": {"category": "shipping", "department": "logistics"},
+    "text": "Los pedidos se procesan en un plazo de 1 a 2 días hábiles a partir de la confirmación del pago. Los tiempos de entrega estándar oscilan entre 3 y 7 días hábiles para envíos nacionales, y entre 7 y 21 días hábiles para envíos internacionales dependiendo del destino. Los envíos exprés tienen un plazo garantizado de 1 a 2 días hábiles y están disponibles únicamente para pedidos realizados antes de las 2:00 PM hora local. El cliente recibirá un número de seguimiento por correo electrónico una vez que el paquete sea despachado desde nuestro almacén. Si el paquete no ha sido entregado transcurrido el plazo máximo estimado, el cliente debe reportar el incidente dentro de los 5 días hábiles siguientes para iniciar una investigación con la transportista. En caso de paquetes perdidos confirmados por la transportista, se procederá al reenvío del producto o al reembolso completo a elección del cliente. No nos hacemos responsables por retrasos ocasionados por desastres naturales, huelgas o restricciones aduaneras."
+  },
+  {
+    "doc_id": "pol_privacidad_datos",
+    "title": "Política de Privacidad y Tratamiento de Datos Personales",
+    "metadata": {"category": "legal", "department": "compliance"},
+    "text": "Recopilamos datos personales como nombre, correo electrónico, dirección postal y datos de pago con el único propósito de procesar pedidos, gestionar cuentas y brindar soporte al cliente. No vendemos, arrendamos ni compartimos los datos personales de los clientes con terceros con fines comerciales. Los datos son almacenados en servidores certificados bajo el estándar ISO 27001 y cifrados con protocolos AES-256. Los clientes tienen derecho a solicitar acceso, rectificación o eliminación de sus datos personales enviando una solicitud formal al equipo de privacidad. El plazo de respuesta para solicitudes de derechos ARCO es de 15 días hábiles. Conservamos los datos de transacciones por un período de 5 años en cumplimiento de la normativa fiscal aplicable. El uso de la plataforma implica la aceptación de esta política de privacidad, la cual puede ser actualizada periódicamente con previo aviso al cliente."
+  },
+  {
+    "doc_id": "pol_pagos_facturacion",
+    "title": "Métodos de Pago y Facturación Electrónica",
+    "metadata": {"category": "billing", "department": "finance"},
+    "text": "Aceptamos tarjetas de crédito y débito Visa, Mastercard y American Express, además de transferencias bancarias directas y pasarelas de pago seguras (PayPal, MercadoPago). Todas las transacciones se realizan bajo cumplimiento PCI-DSS nivel 1. La emisión de facturas electrónicas oficiales puede solicitarse dentro del mismo mes calendario de la compra a través del portal de autofacturación, ingresando el RFC, NIT, RUT o identificación tributaria correspondiente. Las facturas corregidas por errores en los datos fiscales deben solicitarse dentro de las 72 horas posteriores a la emisión inicial. Los reembolsos derivados de compras facturadas se acompañan de una nota de crédito fiscal que anula el comprobante original."
+  },
+  {
+    "doc_id": "pol_cancelacion_pedidos",
+    "title": "Cancelación y Modificación de Pedidos",
+    "metadata": {"category": "orders", "department": "customer_support"},
+    "text": "Un pedido puede ser cancelado sin penalización mientras se encuentre en estado 'Confirmado' o 'En Preparación' antes de su recolección por la empresa transportista. Una vez asignada la guía de despacho y marcado como 'Despachado', el pedido no puede ser cancelado en tránsito y el cliente deberá tramitar una devolución regular al recibirlo. Para cancelar pedidos en preparación, el cliente debe seleccionar 'Cancelar Pedido' en su perfil o solicitarlo por chat en vivo con un agente. El reembolso se tramita automáticamente en un plazo de 24 a 48 horas tras confirmar la cancelación en almacén."
+  },
+  {
+    "doc_id": "pol_danos_transporte",
+    "title": "Reclamaciones por Daños en Transporte",
+    "metadata": {"category": "logistics", "department": "customer_support"},
+    "text": "Si el producto llega con señales evidentes de rotura, caja aplastada, sellos violentados o piezas faltantes debido al manejo del servicio de paquetería, el cliente debe notificar el incidente dentro de las 48 horas siguientes a la recepción documentada. Es requisito indispensable adjuntar fotografías claras del empaque exterior, la etiqueta de la transportista y el daño visible en el artículo. Tras la validación del reclamo por nuestro equipo de prevención de siniestros, se generará una guía prepagada de retorno y se despachará un reemplazo prioritario sin costo adicional para el usuario."
+  },
+  {
+    "doc_id": "pol_seguridad_2fa",
+    "title": "Seguridad de Cuentas y Restablecimiento de Credenciales",
+    "metadata": {"category": "security", "department": "it_security"},
+    "text": "Para proteger la integridad de los datos de nuestros usuarios, todas las cuentas tienen acceso a autenticación de doble factor (2FA) mediante aplicaciones TOTP como Google Authenticator o Microsoft Authenticator. En caso de pérdida de acceso al dispositivo 2FA o al correo electrónico registrado, el restablecimiento de la cuenta requiere un proceso de validación de identidad estricto mediante envío de documento oficial con foto y verificación facial en vivo. Los agentes de soporte de primer nivel no están autorizados a desactivar el doble factor sin la aprobación formal del equipo de seguridad informática."
+  },
+  {
+    "doc_id": "pol_garantia_extendida_care",
+    "title": "Programa de Garantía Extendida y Protección Care Plus",
+    "metadata": {"category": "warranty", "department": "sales"},
+    "text": "El plan Care Plus extiende la cobertura original del fabricante por 24 o 36 meses adicionales e incluye cobertura contra accidentes fortuitos (derrames de líquidos, caídas y sobretensiones eléctricas). Los clientes pueden adquirir el plan Care Plus durante la compra del producto o dentro de los primeros 15 días tras la entrega. El plan incluye hasta dos incidentes de reparación accidental por año cubiertos bajo un deducible preferencial del 10% del valor del equipo. Las solicitudes se tramitan a través de la línea exclusiva VIP con recolección a domicilio en 24 horas hábiles."
+  },
+  {
+    "doc_id": "pol_licencias_digitales",
+    "title": "Devolución y Activación de Software y Licencias Digitales",
+    "metadata": {"category": "digital_goods", "department": "billing"},
+    "text": "Los códigos de activación de software, tarjetas de regalo digitales y licencias electrónicas se entregan de manera instantánea por correo electrónico y en el panel del usuario. Debido a la naturaleza no retornable de los códigos de canje, no se admiten devoluciones ni reembolsos una vez que la clave de licencia ha sido revelada o visualizada en el portal. Si el cliente experimenta fallas de activación, nuestro equipo de soporte técnico gestionará la verificación con el fabricante y emitirá un reemplazo de clave en caso de defecto técnico demostrado dentro de los primeros 7 días."
+  },
+  {
+    "doc_id": "pol_cobros_duplicados",
+    "title": "Protocolo de Disputas y Cobros No Reconocidos",
+    "metadata": {"category": "billing", "department": "fraud_prevention"},
+    "text": "En caso de detectar un cargo duplicado o un monto inconsistente en el estado de cuenta bancario, el cliente debe reportar el folio de autorización a nuestro equipo de facturación antes de iniciar un contracargo ante la entidad emisora. Las revisiones de cobro duplicado se resuelven en un plazo máximo de 72 horas hábiles. Si se confirma el cobro erróneo, la reversión del dinero se procesa de inmediato hacia la misma tarjeta, tardando entre 3 y 10 días bancarios en reflejarse según la entidad financiera del titular."
+  },
+  {
+    "doc_id": "pol_cambio_direccion",
+    "title": "Modificación de Dirección de Entrega y Destino",
+    "metadata": {"category": "shipping", "department": "logistics"},
+    "text": "La dirección de destino puede modificarse sin costo adicional siempre que el pedido no haya sido etiquetado en almacén. Para pedidos en ruta, el reencaminamiento a una nueva dirección dentro de la misma ciudad depende de la política de la transportista y puede generar un recargo logístico de hasta $5.00 USD y un retraso de 24 a 48 horas en la entrega final. Por motivos de seguridad antifraude, no se permiten cambios de domicilio hacia una ciudad o país diferente al registrado en la orden de compra original una vez efectuado el pago."
+  },
+  {
+    "doc_id": "pol_programa_tradein",
+    "title": "Programa Corporativo de Canje y Reciclaje Trade-In",
+    "metadata": {"category": "trade_in", "department": "sustainability"},
+    "text": "Los clientes pueden canjear teléfonos móviles, tabletas y computadoras portátiles usadas a cambio de crédito aplicable a compras futuras en nuestra tienda en línea. El valor de retoma se calcula preliminarmente mediante un cuestionario de diagnóstico en línea y se confirma tras la inspección física en nuestro centro de evaluación técnica. El cliente dispone de 14 días para enviar su dispositivo antiguo mediante guía prepagada. Si el estado físico coincide con lo declarado, el crédito digital se emite en 48 horas; si difiere, se ofrece una contrapropuesta o la devolución gratuita del equipo."
+  },
+  {
+    "doc_id": "pol_membresia_vip",
+    "title": "Beneficios del Programa de Fidelidad Membresía VIP",
+    "metadata": {"category": "membership", "department": "marketing"},
+    "text": "Los miembros del programa de lealtad VIP acumulan 5 puntos por cada dólar gastado en productos seleccionados y disfrutan de envíos exprés gratuitos e ilimitados en todas las compras superiores a $25.00 USD. Los puntos acumulados tienen una vigencia de 12 meses calendario a partir de su acreditación y pueden canjearse por cupones de descuento, productos exclusivos o donaciones a causas ecológicas aliadas. La membresía puede renovarse de forma anual y cuenta con garantía de satisfacción con reembolso completo durante los primeros 30 días si no se han utilizado beneficios de envío."
+  },
+  {
+    "doc_id": "pol_cupones_promociones",
+    "title": "Términos y Condiciones para Cupones de Descuento",
+    "metadata": {"category": "promotions", "department": "marketing"},
+    "text": "Los cupones y códigos de descuento son de un solo uso por cliente y no son acumulables con otras promociones, rebajas de temporada ni financiamiento a meses sin intereses, a menos que se indique explícitamente en la campaña. Los cupones emitidos por compensación de soporte tienen vigencia de 90 días naturales desde su asignación. En caso de devolución parcial o total de un pedido donde se aplicó un cupón porcentual o de monto fijo, el descuento se prorratea entre los productos devueltos y el cupón no es reembolsable en efectivo."
+  },
+  {
+    "doc_id": "pol_soporte_hardware",
+    "title": "Procedimientos de Diagnóstico Remoto y Servicio de Taller",
+    "metadata": {"category": "technical_support", "department": "engineering"},
+    "text": "Antes de autorizar el ingreso de un dispositivo a laboratorio de servicio técnico, el cliente debe realizar una sesión de diagnóstico remoto asistido por software con un especialista nivel 2. Esta sesión permite descartar fallas de firmware, controladores desactualizados o problemas de configuración del sistema operativo. Si se determina falla física de componentes internos (tarjeta madre, batería, panel de pantalla), se generará una orden RMA y se coordinará el envío a taller central. El tiempo promedio de reparación en taller es de 5 a 10 días hábiles."
+  },
+  {
+    "doc_id": "pol_disputas_escalaciones",
+    "title": "Defensor del Cliente y Escalación de Quejas de Segundo Nivel",
+    "metadata": {"category": "governance", "department": "legal"},
+    "text": "Cuando una inconformidad no pueda ser resuelta satisfactoriamente por los agentes de atención regular tras dos turnos de contacto, el cliente tiene el derecho de solicitar la escalación del expediente a la Oficina del Defensor del Cliente. El Defensor actúa como mediador independiente y emitirá un dictamen vinculante en un plazo máximo de 5 días hábiles. Las resoluciones del Defensor pueden incluir reembolsos por gracia comercial, reposición prioritaria de equipos o indemnizaciones por demoras injustificadas en la prestación de servicios."
+  },
+  {
+    "doc_id": "pol_entregas_fallidas",
+    "title": "Protocolo ante Intentos Fallidos de Entrega y Retorno",
+    "metadata": {"category": "logistics", "department": "operations"},
+    "text": "Las empresas de paquetería aliadas realizan hasta tres intentos de entrega en días hábiles consecutivos en el domicilio señalado por el comprador. En cada intento, el transportista dejará un aviso físico o digital con los datos del intento. Si tras el tercer intento no se logra la entrega por ausencia del destinatario o negativa de recepción, el paquete permanecerá en la sucursal de la paquetería durante 5 días hábiles para recogida personal. Vencido este plazo, el paquete retornará a nuestro centro logístico y se reembolsará el importe descontando los costos operativos de retorno."
+  },
+  {
+    "doc_id": "pol_traspaso_titularidad",
+    "title": "Modificación de Titular de Cuenta y Traspaso de Servicios",
+    "metadata": {"category": "accounts", "department": "customer_support"},
+    "text": "El traspaso de la titularidad de una cuenta corporativa o servicio administrado requiere la autorización escrita tanto del titular actual como del nuevo representante legal. Debe presentarse el poder notarial vigente y la cédula fiscal de ambas partes. El proceso de cesión de derechos demora de 3 a 5 días hábiles y conserva intacto el historial de facturación, contratos vigentes, licencias activas y tarifas pactadas bajo el acuerdo comercial previo."
+  },
+  {
+    "doc_id": "pol_aduanas_aranceles",
+    "title": "Envíos Internacionales y Trámites Aduaneros de Importación",
+    "metadata": {"category": "international", "department": "logistics"},
+    "text": "Para pedidos internacionales, los precios exhibidos en tienda pueden no incluir aranceles de importación, IVA local ni tasas de desaduanamiento cobradas por las autoridades fiscales del país receptor. Dichos gravámenes son responsabilidad exclusiva del cliente comprador al momento del arribo del paquete a la aduana fronteriza. Si el comprador rechaza el pago de los impuestos aduaneros y el paquete es confiscado o destruido por las autoridades aduaneras, no habrá derecho a reembolso comercial."
+  },
+  {
+    "doc_id": "pol_compras_corporativas",
+    "title": "Condiciones Comerciales para Ventas B2B y Compras por Volumen",
+    "metadata": {"category": "b2b", "department": "sales"},
+    "text": "Las organizaciones que adquieran más de 10 unidades del mismo producto o alcancen un monto de orden superior a $5,000.00 USD califican para condiciones comerciales especiales B2B. Estas condiciones incluyen descuentos escalonados del 5% al 20%, crédito comercial a 30 días previa evaluación crediticia, asignación de un ejecutivo de cuenta dedicado y entregas programadas por lotes. Los pedidos corporativos bajo orden de compra firmada no están sujetos a cancelación unilateral una vez autorizada la línea de producción."
+  },
+  {
+    "doc_id": "pol_retiro_tienda",
+    "title": "Servicio de Recogida en Tienda y Casilleros Inteligentes",
+    "metadata": {"category": "omnichannel", "department": "retail"},
+    "text": "Los clientes pueden optar por retirar sus compras en cualquiera de nuestras sucursales o en la red de casilleros inteligentes asociados sin costo de envío. Una vez que el pedido arriba al punto de retiro seleccionado, el cliente recibirá una notificación con un código QR seguro y un PIN de seis dígitos. El plazo máximo para recoger el producto es de 7 días naturales. Si el pedido no es retirado en este período, los artículos regresarán al inventario general y se tramitará la devolución del dinero."
+  },
+  {
+    "doc_id": "pol_productos_reacondicionados",
+    "title": "Políticas de Venta y Garantía de Artículos Reacondicionados",
+    "metadata": {"category": "refurbished", "department": "quality_assurance"},
+    "text": "Los artículos clasificados como 'Reacondicionados Certificados' han sido inspeccionados, reparados y sometidos a rigurosas pruebas de funcionalidad de 40 puntos por técnicos autorizados. Se comercializan clasificados en tres grados cosméticos: Grado A (impecable, sin marcas visibles), Grado B (marcas menores que no afectan el rendimiento) y Grado C (desgaste evidente pero 100% operativo). Todos los productos reacondicionados cuentan con 6 meses de garantía directa de nuestra tienda y derecho a devolución dentro de los primeros 15 días tras la compra."
+  },
+  {
+    "doc_id": "pol_responsabilidad_ambiental",
+    "title": "Disposición Ecológica de Residuos Electrónicos (RAEE)",
+    "metadata": {"category": "sustainability", "department": "compliance"},
+    "text": "En cumplimiento de las normativas ambientales sobre Residuos de Aparatos Eléctricos y Electrónicos (RAEE), facilitamos puntos de recolección en todas nuestras sucursales para el reciclaje seguro de baterías, cables, pantallas y componentes electrónicos en desuso. Los clientes que entreguen equipos antiguos para disposición ambiental recibirán un cupón de agradecimiento con 5% de descuento en su próxima compra de accesorios ecológicos. Nos comprometemos a que el 95% de los materiales recolectados sean reincorporados a cadenas de economía circular certificadas."
+  }
+]

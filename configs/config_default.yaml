@@ -1,0 +1,57 @@
+system:
+  device: "cuda" # "cuda" o "cpu"
+  seed: 42
+  work_dir: "d:/Proyecto_tesis"
+  log_level: "INFO"
+
+models:
+  # Modelo local para desarrollo y testing (RTX 4050 6GB)
+  development_generator: "Qwen/Qwen2.5-1.5B-Instruct"
+  # Modelo para benchmark final (RTX 4090 / Cloud)
+  benchmark_generator: "Qwen/Qwen2.5-14B-Instruct"
+  
+  # Cuantización para optimización de VRAM
+  load_in_4bit: true
+  
+  # Modelos de Recuperación y Reranking
+  dense_retriever: "BAAI/bge-m3"
+  sparse_retriever: "naver/splade-cocondenser-ensembledistil"
+  reranker: "BAAI/bge-reranker-large"
+  
+  # Evaluador de Veracidad NLI (Desacoplado)
+  nli_judge: "cross-encoder/nli-deberta-v3-large"
+
+retrieval:
+  top_k_retrieval: 10
+  top_k_rerank: 3
+  rrf_k: 60
+  sparse_weight: 0.35
+  dense_weight: 0.65
+
+router:
+  # Presupuestos de latencia en milisegundos
+  single_step_latency_budget_ms: 1200
+  multi_hop_latency_budget_ms: 2200
+  
+  tau_fast_parametric: 0.25  # u_ctx < 0.25 -> ruta paramétrica rápida
+  tau_hybrid_rag: 0.65       # 0.25 <= u_ctx < 0.65 -> Hybrid RAG + Rerank
+  tau_agent_reflection: 0.85 # 0.65 <= u_ctx < 0.85 -> Bucle Agéntico ReAct
+  # u_ctx >= 0.85 -> Abstención asistida (derivar a humano con resumen)
+
+fsm_guardrail:
+  strict_validation: true
+  max_transitions_per_turn: 5
+  allowed_timeout_ms: 50
+
+adaptation:
+  lora_rank: 8
+  lora_alpha: 16
+  lora_target_modules: ["q_proj", "v_proj", "k_proj", "o_proj"]
+  batch_update_threshold: 32 # número de deltas para disparar micro-ajuste
+  decay_factor_gamma: 0.95
+
+paths:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  mcp_resources_dir: "data/mcp_resources"
+  results_dir: "results"

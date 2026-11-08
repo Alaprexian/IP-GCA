@@ -349,7 +349,7 @@ Si utilizas este código o arquitectura en investigaciones o publicaciones acad�
   title        = {IP-GCA: Implicit Preference-Gated Copilot Architecture for Grounded Customer Support with Deterministic Guardrails},
   school       = {Facultad de Ingeniería},
   year         = {2026},
-  type         = {Tesis de Maestría en Inteligencia Artificial / Ingeniería de Software}
+  type         = {Tesis de Maestría en Ciencias de la computación}
 }
 ```
 

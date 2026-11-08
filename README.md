@@ -357,4 +357,4 @@ Si utilizas este código o arquitectura en investigaciones o publicaciones acad�
 
 ## Licencia
 
-Distribuido bajo la Licencia MIT. Consulta el archivo `LICENSE` para más información.
+XD
